@@ -5,8 +5,7 @@
                  <h1>404 - Error</h1>
                  <p class="animate-text">
                     <span>Je nám líto, ale požadovaná stránka nebyla nalezena.</span>
-                    <span>Ujistěte se, že jste neudělali chybu v URL adrese.</span>
-                    <span>Je možné, že byla stránka přemístěna nebo odstraněna.</span>
+                    <span>Ujistěte se, že jste Vámi zadané údaje jsou správné.</span>
                  </p>
             </div>
         </div>
