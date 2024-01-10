@@ -9,6 +9,10 @@ $pages = [
     'succes' => "",
     'homepage' => "",
     'logout' => "",
+    'analyzuj' => "",
+    'test' => "",
+    'formprocess' => "",
+    'oop' => "",
 ];
 if (empty($p)) {
     $p = 'home';

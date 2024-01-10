@@ -2,16 +2,11 @@
      <div class="container404">
         <div class="row">
             <div class="home-text">
-                 <h1>404 - Error</h1>
-                 <p class="animate-text">
-                    <span>Je nám líto, ale požadovaná stránka nebyla nalezena.</span>
-                    <span>Ujistěte se, že Vámi zadané údaje jsou správné.</span>
-                 </p>
+                 <h2>Zadal(a) jste špatný e-mail nebo heslo. </h2>
             </div>
         </div>
      </div>
 </section>
-<script src="js/script.js"></script>
 <div class="back-error">
    <a href="?p=home">Zpět na hlavní stránku</a>
 </div>

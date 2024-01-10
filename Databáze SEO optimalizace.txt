@@ -1,0 +1,38 @@
+$connection = mysqli_connect("a054um.forpsi.com","f163385","9Lb65cD3","f163385");
+
+Date Název Odkaz H1 Title Meta Decsription Keywords Links
+
+Tlačítko SAVE: 
+
+vytvořit sloupec Title, Sloupec Meta Description a URL
+
+Po kliknutí na tlačítko SAVE ->
+
+Pokud to bude kratší jak 60 znaků, uloží se do Title
+Pokud bude v rozmezí 100 - 165 znaků - uložit do meta description
+Pokud bude text obsahovat www. uložit do url
+
+ukládat, aby bylo online na této stránce vidět. 
+
+Chci to exportovat, takže nakonec vytvořit tlačítko EXPORT do csv. 
+
+
+
+ZMĚNY
+.main {
+
+display: block ????
+
+
+.item-section-grid {
+gap: 20px - ZMĚNIT!
+
+
+ display: grid;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer";
+}

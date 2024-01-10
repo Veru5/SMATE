@@ -3,16 +3,24 @@
     Connection();
 
     if(isset($_POST["submit-reg"])){
+        // Zde ukládáme uživatele do cookies
+        $cookie_name = "user-registration";
+        $cookie_value = json_encode([
+            'username'=>$_POST["username"],
+            'email' =>$_POST["email"]
+        ]);
+
+        setcookie($cookie_name, $cookie_value, time() + (86400*30), "/");
+
         AddFun();
     }
 ?>
 
 <div class="container">
-    <img src="images/logo-C95659-left.svg" class="image">
     <form action="" method="post">
     <div class="form-group">
             <input type="text" name="email" id="email" class="form-control" required>
-            <label for="email" class="email">Email</label>
+            <label for="email" class="email">E-mail</label>
         </div>
         <div class="form-group">
             <input type="text" name="username" id="name" class="form-control" required>

@@ -13,6 +13,9 @@
         <?php
             include "content/header.php";
             include "content/main-menu.php";
+            include "content/footer.php";
+
+    
         ?>
     </div>
 </body>
