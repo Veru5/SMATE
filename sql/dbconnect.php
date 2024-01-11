@@ -16,8 +16,10 @@ function AddFun(){
     $email = $_POST["email"];
     $username = $_POST["username"];
     $password = $_POST["password"];
+    
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    $query = "INSERT INTO usersregistration(email, username, password, date) VALUES ('$email','$username','$password',current_timestamp())";
+    $query = "INSERT INTO usersregistration(email, username, password, password_hash, date) VALUES ('$email','$username','$password', '$hashedPassword', current_timestamp())";
 
     $result = mysqli_query($connection,$query);
 
@@ -46,11 +48,14 @@ function SelectFun(){
 
         if(mysqli_num_rows($result) === 1) {
             $row = mysqli_fetch_assoc($result);
-            if ($row["email"] === $email && $row["password"] === $password) {
+            if (password_verify($password, $row["password_hash"])) {
                 $_SESSION["email"] = $row["email"];
                 $_SESSION["password"] = $row["password"];
                 $_SESSION["id"] = $row["id"];
                 header("location: ?p=homepage");
+                exit();
+            } else {
+                header("location: ?p=404");
                 exit();
             }
         } else {
@@ -58,12 +63,12 @@ function SelectFun(){
             exit();
         }
     }
-
-}else {
-        header("location: ?p=succes");
-        exit();
-    }
+} else {
+    header("location: ?p=succes");
+    exit();
 }
+}   
+
 ?>
 
 
