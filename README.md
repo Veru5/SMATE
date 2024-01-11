@@ -16,7 +16,7 @@ Na stránce homepage.php naleznete nástroj - **Word Counter**. Stačí vložit 
 
 ## Online výpis v tabulce
 
-Další nástroj je na vložení konkrétní url, titlu a meta descriptionu s tabulkovým výpisem pod nástrojem.
+Další nástroj je na vložení konkrétní URL, Titlu a Meta Descriptionu s tabulkovým výpisem pod nástrojem. Data se opět vkládají do databáze MySQL.
 
 ## Export dat
 
