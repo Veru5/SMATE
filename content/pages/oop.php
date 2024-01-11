@@ -50,9 +50,10 @@ class Form {
     public function processFormData() {
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
             // Získání dat z odeslaného formuláře
-            $this->url = isset($_POST['url']) ? $_POST['url'] : '';
-            $this->title = isset($_POST['title']) ? $_POST['title'] : '';
-            $this->metaDescription = isset($_POST['meta_description']) ? $_POST['meta_description'] : '';
+            $this->url = isset($_POST['url']) ? htmlspecialchars($_POST['url'], ENT_QUOTES, 'UTF-8') : '';
+            $this->title = isset($_POST['title']) ? htmlspecialchars($_POST['title'], ENT_QUOTES, 'UTF-8') : '';
+            $this->metaDescription = isset($_POST['meta_description']) ? htmlspecialchars($_POST['meta_description'], ENT_QUOTES, 'UTF-8') : '';
+
 
             // Kontrola platnosti URL
             if ($this->isValidUrl($this->url)) {
