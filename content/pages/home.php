@@ -12,7 +12,7 @@
         SelectFun();
     }
 ?>
-<script src="js/script.js"></script>
+<!-- <script src="js/script.js"></script> -->
 <h2>Přihlásit se!</h2>
 <div class="container">
     <form action="" method="post">

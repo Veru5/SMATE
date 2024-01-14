@@ -20,7 +20,7 @@
                     <option value="🔝">🔝</option>
                     <option value="✔️">✔️</option>
                     </select>
-                <input type="submit" value="EXPORT" class="butt" onclick="exportDataToCSV()">
+                <input type="submit" value="EXPORTAB" class="butt" onclick="exportDataToCSV()">
             </div>
             <div class="item-section-grid">
                 <div class="entry">
@@ -59,14 +59,14 @@ function restoreText() {
     
     
     // DELETE TEXT //
-    function deleteText() {
+function deleteText() {
     var textArea = document.getElementById("text");
     var smazanaHodnota = textArea.value; // Uložení aktuální hodnoty textového pole
     textArea.value = ""; // Smazání textu v poli
     textArea.setAttribute("data-value", smazanaHodnota); // Uložení smazané hodnoty do atributu
     }
     
-// CLASSIC //
+    // CLASSIC //
 function convertToClassic() {
     var inputTextElement = document.getElementById("text");
     var inputText = inputTextElement.value;
@@ -83,13 +83,13 @@ function convertToClassic() {
     inputTextElement.value = classicText;
     }
     
-// CAMELCASE //
+    // CAMELCASE //
 function convertToCamelCase() {
     // Získání textu z pole
     var inputTextElement = document.getElementById("text");
     var inputText = inputTextElement.value;
     
-// Funkce pro konverzi textu na CamelCase s mezerami mezi slovy a zachováním celých vět
+    // Funkce pro konverzi textu na CamelCase s mezerami mezi slovy a zachováním celých vět
 function toCamelCaseWithSpaces(text) {
         // Rozdělení textu na věty pomocí teček, otazníků a vykřičníků
         var sentences = text.split(/[.!?]/);
@@ -121,7 +121,7 @@ function toCamelCaseWithSpaces(text) {
     }
     
     
-// UPPERCAE //
+    // UPPERCAE //
 function convertToUppercase() {
     const textElement = document.getElementById("text");
     const text = textElement.value;
@@ -132,7 +132,7 @@ function convertToUppercase() {
     textElement.value = uppercaseText;
     }
     
-// LOWERCASE //
+    // LOWERCASE //
 function convertToLowercase() {
     const textElement = document.getElementById("text");
     const text = textElement.value;
@@ -143,7 +143,7 @@ function convertToLowercase() {
     textElement.value = lowercaseText;
     }
     
-// EMOJI //
+    // EMOJI - funkce pro vkládání //
 function insertEmoji() {
     var emojiSelect = document.getElementById("emojiSelect");
     var selectedEmoji = emojiSelect.options[emojiSelect.selectedIndex].value;
@@ -151,14 +151,17 @@ function insertEmoji() {
     var text = inputTextElement.value;
     var cursorPosition = inputTextElement.selectionStart;
     
+    // Rozdělení textu před a po vložení
     var textBeforeCursor = text.substring(0, cursorPosition);
     var textAfterCursor = text.substring(cursorPosition);
     
+    // Nový text s emoji
     var newText = textBeforeCursor + selectedEmoji + textAfterCursor;
     inputTextElement.value = newText;
     inputTextElement.setSelectionRange(cursorPosition + selectedEmoji.length, cursorPosition + selectedEmoji.length);
     }
     
+    // Aktualizace počtu slov a znaků
     var textElement = document.getElementById("text");
     var pocetSlovElement = document.getElementById("pocet_slov");
     var pocetZnakuElement = document.getElementById("pocet_znaku");
@@ -168,10 +171,12 @@ function insertEmoji() {
     var pocetZnaku = text.length;
     var pocetSlov = text.split(/\s+/).filter(Boolean).length;
     
+    // Zobrazení aktualizovaných hodnot
     pocetSlovElement.textContent = "Počet slov: " + pocetSlov;
     pocetZnakuElement.textContent = "Počet znaků: " + pocetZnaku;
     });
 
+    // Export do CSV
 function exportDataToCSV() {
         // Získání obsahu tabulky
     var table = document.querySelector('table');
