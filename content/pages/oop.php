@@ -1,10 +1,10 @@
 <?php
 session_start();
 class Form {
-     private $url;
+    private $url;
     private $title;
-     private $metaDescription;
-     private $conn; // Připojení k databázi
+    private $metaDescription;
+    private $conn; // Připojení k databázi
     public function __construct() {
         // Inicializace proměnných nebo jiné potřebné úkony při vytváření instance třídy
         $this->url = '';
