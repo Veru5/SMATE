@@ -36,7 +36,7 @@ function SelectFun(){
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    // Ověření e-mailu
+    // Kontrola platné e-mailové adresy
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         header("location: ?p=404");
