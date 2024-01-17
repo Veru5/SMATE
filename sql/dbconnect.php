@@ -36,6 +36,13 @@ function SelectFun(){
     $email = $_POST["email"];
     $password = $_POST["password"];
 
+    // Ověření e-mailu
+
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        header("location: ?p=404");
+        exit();
+    }
+
     if(empty($email)) {
         header("location: ?p=404");
         exit();
