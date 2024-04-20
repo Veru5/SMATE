@@ -13,6 +13,8 @@ $pages = [
     'test' => "",
     'formprocess' => "",
     'oop' => "",
+    'api-server' => "",
+    'api-klient' => "",
 ];
 if (empty($p)) {
     $p = 'home';
