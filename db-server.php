@@ -2,11 +2,6 @@
 header('Content-Type: application/json; charset=utf-8');
 
 // Definice informací o databázi smate.cz
-/*
-$host = "a054um.forpsi.com";
-$database = "f163385";
-$username = "f163385";
-$password = "9Lb65cD3"; */
 
 // Definice informací o databázi
 $host = "localhost";
